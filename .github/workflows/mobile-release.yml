@@ -23,7 +23,7 @@ jobs:
           echo "::set-output name=COMMIT_HASH::$commit_hash"
 
   build:
-    name: Build
+    name: ${{ matrix.name }}
     needs: get-commit-hash
     strategy:
       matrix:
