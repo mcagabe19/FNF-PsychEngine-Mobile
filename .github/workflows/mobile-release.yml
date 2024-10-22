@@ -24,7 +24,7 @@ jobs:
 
   build:
     name: Build
-    if: needs.get-commit-hash.result != 'failure'
+    needs: get-commit-hash
     strategy:
       matrix:
         include:
